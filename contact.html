@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Electro</title>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <header>
+        <a class="logo" href="index.html">
+            <img src="images/logo.jpg" alt="Логотип" />
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="booking.html">Онлайн запись</a></li>
+                <li><a href="services.html">Процедуры</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </header>
+
+
+    <main>
+        <!-- О мастере -->
+        <section class="about-section">
+            <div class="about-card">
+                <div class="about-text">
+                    <h1>Элина</h1>
+                    <p class="subtitle">Косметолог с медицинской базой <br>Мастер по электроэпиляции</p>
+                    <ul class="bio-list">
+                        <li>🌿 5 лет работы с кожей</li>
+                        <li>🌿 Есть отзывы и работы до/после</li>
+                        <li>🌿 Ежегодные повышения квалификации</li>
+                    </ul>
+                    <p class="intro">
+                        Электроэпиляция появилась в услуге не просто так.
+                        Это идеальное дополнение в сфере косметологии.
+                        Ведь только дерматология и косметология глубоко разбираются в коже.
+                        Электроэпиляция — не только работа с волосом, но и с кожей.
+                    </p>
+                </div>
+                <div class="about-photo">
+                    <img src="images/master.jpg" alt="Мастер Элина">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="features">
+            <h2>Почему выбирают меня</h2>
+            <div class="feature">
+                <h2>Стерильность</h2>
+                <p>Чистота и безопасность на первом месте.</p>
+            </div>
+            <div class="feature">
+                <h2>Повышение квалификации</h2>
+                <p>Постоянное обучение и рост.</p>
+            </div>
+            <div class="feature">
+                <h2>Современные методы</h2>
+                <p>Специалист по современным методам работы и уходу.</p>
+            </div>
+            <div class="feature">
+                <h2>Длительное обучение</h2>
+                <p>Обучение электроэпиляции 6 месяцев (в отличие от кратких курсов).</p>
+            </div>
+            <div class="feature">
+                <h2>Тщательный выбор средств</h2>
+                <p>Использую только качественные продукты для ухода за кожей.</p>
+            </div>
+            <div class="feature">
+                <h2>Опыт работы с кожей 5 лет</h2>
+                <p>Косметологическое образование и успешная практика работы с кожей.</p>
+            </div>
+            <div class="feature">
+                <h2>Забота о клиенте</h2>
+                <p>В случае дискомфорта процедура может быть остановлена по желанию клиента.</p>
+            </div>
+            <div class="feature">
+                <h2>Реальные результаты</h2>
+                <p>Много примеров работ «до/после» — косметология и электроэпиляция.</p>
+            </div>
+        </section>
+
+
+       <section class="contacts-map">
+  <div class="contacts-info">
+    <h2>Контакты</h2>
+
+    <div class="contact-item">
+      <i>📍</i>
+      <span>Veerenni tn 55, 11313 Tallinn</span>
+    </div>
+
+    <div class="contact-item">
+      <a href="https://www.instagram.com/cosmos.electro" target="_blank" class="insta-link">
+        <img src="images/instagram.png" alt="Instagram">
+        <span>@cosmos.electro</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="map">
+    <iframe title="my-map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2030.0028579627515!2d24.751282312740244!3d59.41634727455083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469294bbd258950f%3A0xf802ba551ffc05bf!2sVeerenni%20tn%2055%2C%2011313%20Tallinn!5e0!3m2!1sru!2see!4v1759335816067!5m2!1sru!2see"
+      allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+    </main>
+
+
+
+
+    <footer>
+        <p>© 2025 Cosmos Electro. Все права защищены.</p>
+    </footer>
+  <script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+
+</html>

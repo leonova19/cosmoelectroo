@@ -1,0 +1,297 @@
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+    position: fixed;    /* фиксируем */
+  top: 0;             /* прижать к верху */
+  left: 0;
+  width: 100%;        /* чтобы на всю ширину */
+  z-index: 1000; 
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 100px; /* отступ под фиксированное меню */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 70px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.3rem;
+}
+nav a:hover {
+  color: #0f4b39; /* тёмно-зелёный */
+}
+
+
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+nav a:hover,
+nav a:active {
+  color: #0f4b39;
+}
+
+main {
+  max-width: 1100px;
+  margin: 120px auto 60px auto; /* отступ из-за фиксированного меню */
+  padding: 0 20px;
+}
+
+.prices {
+padding-top: 60px;
+}
+
+
+
+
+/* Сетка для блоков */
+.prices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 200px;
+  margin-bottom: 40px;
+}
+
+/* Карточка цены */
+.price-block h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+  color: #0b3d2e;
+  font-weight: bold;
+
+}
+
+.price-item {
+  background: #f6f6f6;
+  border-left: 5px solid #0b3d2e;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: space-between; /* название слева, цена справа */
+  align-items: center;
+}
+
+
+.price-item h3 {
+  margin: 0;
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.price-item p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #0f4b39;
+  font-family: "Nunito", sans-serif;
+
+}
+
+.price-note {
+  background: #f9f9f9; /* светло-серый фон */
+  border-radius: 6px;
+  color: #000000;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Кнопка */
+.cta {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background: #0f4b39;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  font-size: 1.2rem;
+}
+
+.btn:hover {
+  background: #08271e;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #000;
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 60%;
+    height: calc(100vh - 90px);
+    padding: 40px 20px;
+    transition: right 0.4s ease;
+  }
+
+  nav.open ul {
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #000;
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 60%;
+    height: calc(100vh - 90px);
+    padding: 40px 20px;
+    transition: right 0.4s ease;
+  }
+
+  nav.open ul {
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .prices-grid {
+    grid-template-columns: 1fr; /* одна колонка */
+    gap: 40px;
+  }
+
+  .price-block h2 {
+    font-size: 1.7rem;
+  }
+
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 6px;
+  }
+
+  .price-item h3 {
+    font-size: 1rem;
+  }
+
+  .price-item p {
+    font-size: 1rem;
+    align-self: flex-end;
+  }
+
+  .price-note {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+
+  .btn {
+    width: 80%;
+    max-width: 300px;
+    font-size: 1rem;
+  }
+}
+
+/* --- Маленькие экраны --- */
+@media (max-width: 480px) {
+  .price-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .price-item h3 {
+    font-size: 0.95rem;
+  }
+
+  .price-item p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 12px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 25px; /* как на главной странице */
+  }
+
+  .burger {
+    right: 25px;
+    position: absolute;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}

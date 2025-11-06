@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmos Electro</title>
+  <link rel="stylesheet" href="css/info.css">
+
+</head>
+
+<body>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <header>
+    <a class="logo" href="index.html">
+      <img src="images/logo.jpg" alt="Логотип" />
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="booking.html">Онлайн запись</a></li>
+        <li><a href="services.html">Процедуры</a></li>
+        <li><a href="prices.html">Цены</a></li>
+        <li><a href="info.html">Информация</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+
+      </ul>
+    </nav>
+
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="faq">
+      <h1>Часто задаваемые вопросы</h1>
+    </section>
+
+    <script>
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+    </script>
+  </main>
+
+
+  <script>
+  const spaceId = "k0pr2qc2hwpa";
+  const accessToken = "SUl8U5S2j3LzZs_jn1zCrwaus5Kc7n5CMQByM_G6hHo";
+
+  async function loadFAQ() {
+    const response = await fetch(
+      `https://cdn.contentful.com/spaces/${spaceId}/environments/master/entries?access_token=${accessToken}&content_type=faqItem&order=fields.order`
+    );
+    const data = await response.json();
+
+    const faqContainer = document.querySelector(".faq");
+    faqContainer.innerHTML = `
+      <h1>Часто задаваемые вопросы</h1>
+      ${data.items.map(item => `
+        <div class="faq-item">
+          <button class="faq-question">${item.fields.question}</button>
+          <div class="faq-answer">
+            <p>${item.fields.answer}</p>
+          </div>
+        </div>
+      `).join("")}
+    `;
+
+    // интерактивное открытие ответов
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  }
+
+  loadFAQ();
+</script>
+
+
+
+  <footer>
+    <p>© 2025 Cosmos Electro. Все права защищены.</p>
+  </footer>
+
+  <script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+
+</html>

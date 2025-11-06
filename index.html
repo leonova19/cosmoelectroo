@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Electro</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <header>
+        <a class="logo" href="index.html">
+            <img src="images/logo.jpg" alt="Логотип" />
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="booking.html">Онлайн запись</a></li>
+                <li><a href="services.html">Процедуры</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+         <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    </header>
+
+    <main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Электроэпиляция и косметология</h1>
+            <p>Профессиональный уход для вашей кожи</p>
+        </div>
+    </section>
+
+    <section class="features">
+    <div class="feature">
+      <h2>Аппаратный косметолог</h2>
+      <p>Современные методы ухода за кожей.</p>
+    </div>
+    <div class="feature">
+      <h2>Избавлю от волос НАВСЕГДА</h2>
+      <p>Электроэпиляция — решение для гладкой кожи.</p>
+    </div>
+    <div class="feature">
+      <h2>Автор уверенности и красоты</h2>
+      <p>Индивидуальный подход к каждому клиенту.</p>
+    </div>
+    <div class="feature">
+      <h2>Подбор ухода</h2>
+      <p>Комплексные решения для любых проблем кожи.</p>
+    </div>
+  </section>
+  </main>
+
+    <footer>
+       <p>© 2025 Электроэпиляция и Косметология. Все права защищены.</p>
+    </footer>
+
+  <script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+
+</html>

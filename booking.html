@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmos Electro</title>
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <header>
+        <a class="logo" href="index.html">
+            <img src="images/logo.jpg" alt="Логотип" />
+        </a>
+        <nav id="nav">
+            <ul>
+                <li><a href="booking.html">Онлайн запись</a></li>
+                <li><a href="services.html">Процедуры</a></li>
+                <li><a href="prices.html">Цены</a></li>
+                <li><a href="info.html">Информация</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="booking-hero">
+            <div class="booking-text">
+                <h1>Онлайн запись</h1>
+
+                <ul>
+                    <li>🌿 Забудешь о нежелательных волосах <b>навсегда</b></li>
+                    <li>🌿 Будешь получать <b>комплименты</b></li>
+                    <li>🌿 У тебя будет кожа, о которой ты <b>мечтал/а</b></li>
+
+
+                    <li>Скорее записывайся и давай познакомимся</li>
+                    <li><b>Буду твоим другом красоты</b></li>
+                </ul>
+                <a href="https://dikidi.net/1057822?p=0.pi" target="_blank" class="btn">
+                    Записаться онлайн
+                </a>
+            </div>
+            <div class="booking-img">
+                <img src="images/booking.jpg" alt="Эстетика и уход">
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>© 2025 Cosmos Electro. Все права защищены.</p>
+    </footer>
+
+  <script>
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('open');
+  });
+</script>
+</body>
+
+</html>

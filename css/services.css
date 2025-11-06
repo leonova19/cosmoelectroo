@@ -1,0 +1,590 @@
+body {
+  margin: 0;
+  background: #fff;
+  color: #222;
+  padding-top: 110px;
+}
+
+header {
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: fixed; /* фиксируем */
+  top: 0; /* прижать к верху */
+  left: 0;
+  width: 100%; /* чтобы на всю ширину */
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+main {
+  padding-top: 100px; /* отступ под фиксированное меню */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.logo img {
+  height: 70px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: "Poiret One", sans-serif;
+  font-size: 1.3rem;
+}
+nav a:hover {
+  color: #0f4b39; /* тёмно-зелёный */
+}
+
+
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+nav a:hover,
+nav a:active {
+  color: #0f4b39;
+}
+
+.tabs-section {
+  position: relative;
+  text-align: center;
+  padding: 120px 690px;
+  background-image: linear-gradient(#0b3d2e4a, rgb(0 30 20 / 79%))
+    url("..images/electro.png") center/cover no-repeat;
+  color: #fff;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.tab {
+  padding: 15px 35px;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 2px solid #000000;
+  background: rgba(255, 255, 255, 0.2); /* полупрозрачный фон */
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px); /* легкое размытие фона */
+  font-family: "Poiret One", sans-serif;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.tab.active {
+  background: #000000; /* тёмно-зелёный */
+  color: #fff;
+  border: 2px solid #0b3d2e;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* подсветка */
+}
+
+/* Контент */
+.tab-content {
+  display: none;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.procedure {
+  background: #f6f6f6;
+  border-left: 5px solid #0b3d2e;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  margin-bottom: 60px;
+}
+
+
+.procedure li{
+list-style: none;
+line-height: 1.6;
+font-family: "Nunito", sans-serif;
+font-size: 1.1rem;
+}
+
+.procedure p{
+line-height: 1.6;
+font-family: "Nunito", sans-serif;
+font-size: 1.1rem;
+}
+
+.procedure p1{
+line-height: 1.6;
+font-family: "Nunito", sans-serif;
+}
+
+.tab-content h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #0b3d2e;
+    font-weight: bold;
+}
+
+.procedure h3 {
+  margin-top: 0;
+  color: #0b3d2e;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+.results-carousel-cosmet {
+  background: #f6f6f6;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 60px auto;
+  text-align: center;
+  max-width: 1100px;
+}
+
+.results-carousel-cosmet h2 {
+    text-align: center;
+    font-size: 2.4rem;
+    color: #0b3d2e;
+    font-weight: bold;
+}
+
+.carousel-wrapper-cosmet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+
+.label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  white-space: nowrap;
+}
+
+.carousel-container-cosmet {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f6f6f6;
+  margin: 0 40px;
+
+  
+}
+
+.carousel-track-cosmet {
+  display: flex;
+  transition: transform 0.35s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-track-cosmet img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f6f6f6;
+  border-radius: 8px;
+}
+
+button.prev-cosmet, button.next-cosmet {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.2s ease;
+}
+
+button.prev-cosmet:hover, button.next-cosmet:hover {
+  background: #17322a;
+}
+
+button.prev-cosmet {
+  left: 10px;
+}
+
+button.next-cosmet {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.results-block-electro {
+  background: #f6f6f6;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 60px auto;
+  text-align: center;
+  max-width: 1100px;
+}
+
+.results-block-electro h3 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #0b3d2e;
+  font-weight: bold;
+}
+
+.carousel-wrapper-electro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.side-label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  font-family: "Raleway", sans-serif;
+  white-space: nowrap;
+}
+
+.carousel-container-electro {
+  position: relative;
+  width: 700px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f6f6f6;
+  margin: 0 40px;
+}
+
+.carousel-container-electro:hover {
+  box-shadow: 0 8px 20px rgba(11, 61, 46, 0.3);
+}
+
+.carousel-track-electro {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.slide-pair {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  gap: 5px;
+}
+
+.slide-pair img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #0b3d2e22;
+  background: #fff;
+
+}
+
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #000000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition: all 0.2s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background: #17322a;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #000;
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 60%;
+    height: calc(100vh - 90px);
+    padding: 40px 20px;
+    transition: right 0.4s ease;
+  }
+
+  nav.open ul {
+    right: 0;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) {
+  .tabs-section {
+    padding: 100px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tab {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+  }
+
+  .procedure {
+    padding: 15px;
+  }
+
+  .procedure h3 {
+    font-size: 1.3rem;
+  }
+
+  .procedure p, 
+  .procedure li {
+    font-size: 0.95rem;
+  }
+
+  /* 📸 Блок с результатами */
+  .results-block-electro {
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 95%;
+  }
+
+  .carousel-wrapper-electro {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carousel-container-electro {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 3 / 2; /* сохраняем пропорции */
+    overflow: hidden;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  }
+
+  .carousel-track-electro {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    height: 100%;
+  }
+
+  /* Две картинки рядом, как на ПК */
+  .slide-pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .slide-pair img {
+    width: 49%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #e3e3e3;
+  }
+
+  button.prev, button.next {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .side-label {
+    font-size: 1rem;
+  }
+
+  .results-block-electro h3 {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* === КОСМЕТОЛОГИЯ: РЕЗУЛЬТАТЫ === */
+  .results-carousel-cosmet {
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 95%;
+    background: #f9f9f9;
+  }
+
+  .results-carousel-cosmet h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .carousel-wrapper-cosmet {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .carousel-container-cosmet {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 12px;
+
+  }
+
+  .carousel-track-cosmet {
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .carousel-track-cosmet img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* ограничим высоту */
+    object-fit: contain; /* теперь изображение будет целиком видно */
+
+    border-radius: 10px;
+  }
+
+  button.prev-cosmet,
+  button.next-cosmet {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+
+  button.prev-cosmet:hover,
+  button.next-cosmet:hover {
+    background: #0f4b39;
+  }
+
+  .label {
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 20px 25px; /* как на главной странице */
+  }
+
+  .burger {
+    right: 25px;
+    position: absolute;
+  }
+
+  .logo img {
+    height: 60px;
+  }
+}
