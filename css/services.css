@@ -12,16 +12,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  position: fixed; /* фиксируем */
-  top: 0; /* прижать к верху */
+  position: fixed; 
+  top: 0; 
   left: 0;
-  width: 100%; /* чтобы на всю ширину */
+  width: 100%; 
   z-index: 1000;
   box-sizing: border-box;
 }
 
 main {
-  padding-top: 100px; /* отступ под фиксированное меню */
+  padding-top: 100px; 
 }
 
 .logo {
@@ -47,7 +47,7 @@ nav a {
   font-size: 1.3rem;
 }
 nav a:hover {
-  color: #0f4b39; /* тёмно-зелёный */
+  color: #0f4b39; 
 }
 
 
@@ -104,11 +104,11 @@ nav a:active {
   font-weight: bold;
   border-radius: 12px;
   border: 2px solid #000000;
-  background: rgba(255, 255, 255, 0.2); /* полупрозрачный фон */
+  background: rgba(255, 255, 255, 0.2); 
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(6px); /* легкое размытие фона */
+  backdrop-filter: blur(6px); 
   font-family: "Poiret One", sans-serif;
 }
 
@@ -117,13 +117,13 @@ nav a:active {
 }
 
 .tab.active {
-  background: #000000; /* тёмно-зелёный */
+  background: #000000; 
   color: #fff;
   border: 2px solid #0b3d2e;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* подсветка */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); 
 }
 
-/* Контент */
+
 .tab-content {
   display: none;
   max-width: 1000px;
@@ -439,7 +439,7 @@ footer {
     font-size: 0.95rem;
   }
 
-  /* 📸 Блок с результатами */
+  
   .results-block-electro {
     padding: 25px;
     margin: 30px auto;
@@ -455,7 +455,7 @@ footer {
     width: 100%;
     max-width: 420px;
     height: auto;
-    aspect-ratio: 3 / 2; /* сохраняем пропорции */
+    aspect-ratio: 3 / 2; 
     overflow: hidden;
     border-radius: 12px;
     background: #fff;
@@ -468,7 +468,7 @@ footer {
     height: 100%;
   }
 
-  /* Две картинки рядом, как на ПК */
+
   .slide-pair {
     display: flex;
     justify-content: center;
@@ -507,7 +507,7 @@ footer {
 
 
 @media (max-width: 768px) {
-  /* === КОСМЕТОЛОГИЯ: РЕЗУЛЬТАТЫ === */
+
   .results-carousel-cosmet {
     padding: 25px;
     margin: 30px auto;
@@ -544,8 +544,8 @@ footer {
   .carousel-track-cosmet img {
     width: 100%;
     height: auto;
-    max-height: 400px; /* ограничим высоту */
-    object-fit: contain; /* теперь изображение будет целиком видно */
+    max-height: 400px; 
+    object-fit: contain; 
 
     border-radius: 10px;
   }
@@ -576,7 +576,7 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    padding: 20px 25px; /* как на главной странице */
+    padding: 20px 25px; 
   }
 
   .burger {

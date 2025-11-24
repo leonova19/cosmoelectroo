@@ -11,16 +11,16 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-    position: fixed;    /* фиксируем */
-  top: 0;             /* прижать к верху */
+    position: fixed;    
+  top: 0;             
   left: 0;
-  width: 100%;        /* чтобы на всю ширину */
+  width: 100%;     
   z-index: 1000; 
   box-sizing: border-box;
 }
 
 main {
-  padding-top: 100px; /* отступ под фиксированное меню */
+  padding-top: 100px; 
 }
 
 .logo {
@@ -46,7 +46,7 @@ nav a {
   font-size: 1.3rem;
 }
 nav a:hover {
-  color: #0f4b39; /* тёмно-зелёный */
+  color: #0f4b39; 
 }
 
 
@@ -125,7 +125,7 @@ body {
   flex-direction: column;
 }
 
-/* Секция онлайн-записи */
+
 .booking-hero {
   display: flex;
   align-items: center; 
@@ -142,9 +142,9 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* центрируем по горизонтали */
-  justify-content: center; /* центрируем по вертикали */
-  text-align: center;     /* текст ровно по центру */
+  align-items: center;   
+  justify-content: center; 
+  text-align: center;     
 }
 
 .booking-text h1 {
@@ -190,14 +190,14 @@ body {
 }
 
 .booking-img img {
-  max-width: 85%; /* уменьшаем картинку */
+  max-width: 85%; 
   border-radius: 12px;
-  border: 3px solid #0f4b39; /* зелёная рамка */
+  border: 3px solid #0f4b39; 
   box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 main {
-  flex: 1; /* тянет основной контент */
+  flex: 1; 
 }
 
 footer {
@@ -278,7 +278,7 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    padding: 20px 25px; /* как на главной странице */
+    padding: 20px 25px; 
   }
 
   .burger {

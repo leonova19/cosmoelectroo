@@ -303,7 +303,7 @@
     const contents = document.querySelectorAll('.tab-content');
     const tabsSection = document.getElementById('tabs-section');
 
-    // Фон и контент по умолчанию для "Электроэпиляции"
+
     window.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.tab[data-tab="electro"]').classList.add('active');
       document.getElementById('electro').classList.add('active');
@@ -313,7 +313,7 @@
       tabsSection.style.backgroundPosition = "center";
     });
 
-    // Переключение вкладок
+
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         tabs.forEach(btn => btn.classList.remove('active'));
@@ -343,7 +343,7 @@ const containerCosmet = document.querySelector('.carousel-container-cosmet');
 let indexCosmet = 0;
 
 function updateCosmet() {
-  const width = containerCosmet.clientWidth; // ширина контейнера, а не трека
+  const width = containerCosmet.clientWidth; 
   trackCosmet.style.transform = `translateX(-${indexCosmet * width}px)`;
 }
 
