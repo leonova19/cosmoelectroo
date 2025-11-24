@@ -397,7 +397,6 @@ footer {
     flex-direction: column;
     background: #000;
     position: fixed;
-    top: 90px;
     right: -100%;
     width: 60%;
     height: calc(100vh - 90px);
@@ -416,7 +415,8 @@ footer {
 
 @media (max-width: 1024px) {
   .tabs-section {
-    padding: 100px 40px;
+    padding: 80px 0px;
+    top:-10px;
   }
 }
 
